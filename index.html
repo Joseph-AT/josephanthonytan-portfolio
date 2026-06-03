@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joseph | Data Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="stylesheet" href="styles.css?v=20260603-pointer-events">
+</head>
+<body>
+  <canvas id="dot-field-canvas"></canvas>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <div class="site-logo">
+        Joe<span class="dot">.</span>
+      </div>
+      <nav class="pill-nav" aria-label="Primary navigation">
+        <div class="pill-nav-items">
+          <div class="nav-active-dot"></div>
+          <ul class="pill-list" role="menubar">
+            <li role="none">
+              <a role="menuitem" href="#" class="pill is-active">
+                <span class="hover-circle" aria-hidden="true"></span>
+                <span class="label-stack">
+                  <span class="pill-label">Home</span>
+                  <span class="pill-label-hover" aria-hidden="true">Home</span>
+                </span>
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="#about" class="pill">
+                <span class="hover-circle" aria-hidden="true"></span>
+                <span class="label-stack">
+                  <span class="pill-label">About</span>
+                  <span class="pill-label-hover" aria-hidden="true">About</span>
+                </span>
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="#education" class="pill">
+                <span class="hover-circle" aria-hidden="true"></span>
+                <span class="label-stack">
+                  <span class="pill-label">Education</span>
+                  <span class="pill-label-hover" aria-hidden="true">Education</span>
+                </span>
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="#projects" class="pill">
+                <span class="hover-circle" aria-hidden="true"></span>
+                <span class="label-stack">
+                  <span class="pill-label">Projects</span>
+                  <span class="pill-label-hover" aria-hidden="true">Projects</span>
+                </span>
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="#tools" class="pill">
+                <span class="hover-circle" aria-hidden="true"></span>
+                <span class="label-stack">
+                  <span class="pill-label">Tools</span>
+                  <span class="pill-label-hover" aria-hidden="true">Tools</span>
+                </span>
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="#ai-builds" class="pill">
+                <span class="hover-circle" aria-hidden="true"></span>
+                <span class="label-stack">
+                  <span class="pill-label">AI Builds</span>
+                  <span class="pill-label-hover" aria-hidden="true">AI Builds</span>
+                </span>
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="#exposure" class="pill">
+                <span class="hover-circle" aria-hidden="true"></span>
+                <span class="label-stack">
+                  <span class="pill-label">Exposure</span>
+                  <span class="pill-label-hover" aria-hidden="true">Exposure</span>
+                </span>
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="#testimonials" class="pill">
+                <span class="hover-circle" aria-hidden="true"></span>
+                <span class="label-stack">
+                  <span class="pill-label">Testimonials</span>
+                  <span class="pill-label-hover" aria-hidden="true">Testimonials</span>
+                </span>
+              </a>
+            </li>
+            <li role="none">
+              <a role="menuitem" href="#contact" class="pill pill--inverted">
+                <span class="hover-circle" aria-hidden="true"></span>
+                <span class="label-stack">
+                  <span class="pill-label">Reach Out</span>
+                  <span class="pill-label-hover" aria-hidden="true">Reach Out</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="hero" aria-label="Joseph portfolio hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero-artboard">
+      <img class="hero__subject" src="photos/TransparentSubject.png" alt="Joseph">
+
+      <section class="hero__copy" aria-label="Introduction">
+        <h1 class="hero__intro hero__intro--left">Hi, I'm Joseph!</h1>
+        <p class="hero__intro hero__intro--right">Your <span id="hero-role">Data Analyst AI Builder</span></p>
+
+        <div class="hero__statement">
+          <p><span id="hero-insight">Data Insights</span> That</p>
+          <p class="hero__statement-accent">Solve Real</p>
+          <p>Business Problems</p>
+        </div>
+
+        <a class="button button--work" href="#projects">Discover My Analytics Work</a>
+        <a class="button button--builds" href="#ai-builds">Explore My AI Builds</a>
+        <div class="hero-metrics hero-metrics--left">
+          <div class="hero-metric">
+            <span class="hero-metric-num">5+</span>
+            <span class="hero-metric-label">YEARS EXPERIENCE</span>
+          </div>
+          <div class="hero-metric">
+            <span class="hero-metric-num">60%+</span>
+            <span class="hero-metric-label">REPORTING TIME SAVED</span>
+          </div>
+          <div class="hero-metric">
+            <span class="hero-metric-num">90%</span>
+            <span class="hero-metric-label">PROCESS AUTOMATION</span>
+          </div>
+        </div>
+
+        <div class="hero-metrics hero-metrics--right">
+          <div class="hero-metric">
+            <span class="hero-metric-num">8</span>
+            <span class="hero-metric-label">DATA SCIENCE SOLUTIONS</span>
+          </div>
+          <div class="hero-metric">
+            <span class="hero-metric-num">5+</span>
+            <span class="hero-metric-label">SYSTEMS BUILT</span>
+          </div>
+          <div class="hero-metric">
+            <span class="hero-metric-num">3x</span>
+            <span class="hero-metric-label">TEAM PRODUCTIVITY</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <section id="about" class="content-section layout-left">
+    <h2 class="section-title animate-on-scroll"><span class="title-merge-target">ABOUT</span> <span class="title-accent">ME</span></h2>
+    <div class="section-content animate-on-scroll">
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-card-badge">BIO</div>
+          <p class="about-card-text">Data Analyst driving actionable insights with over <span class="text-about-highlight">5 years</span> of expertise in SQL, Python, Tableau, and Qlik Sense.</p>
+          <ul class="about-card-list">
+            <li>Cut manual reporting cycles by over <span class="text-about-highlight">60%</span> via automated engineering.</li>
+            <li>Delivers high-performance BI solutions across risk and operational systems.</li>
+          </ul>
+        </div>
+        <div class="about-card">
+          <div class="about-card-badge">MY APPROACH</div>
+          <p class="about-card-text">Turning raw complexity into clear, narrative intelligence that inspires <span class="text-about-highlight">confident decisions</span>.</p>
+          <ul class="about-card-list">
+            <li>Prioritize solving the <strong>real business logic</strong> rather than just aggregating data.</li>
+            <li>Transform scattered data into clean, visual stories optimized for leadership.</li>
+            <li>Obsessive focus on maximizing time-efficiency and measurable <span class="text-about-highlight">impact</span>.</li>
+          </ul>
+        </div>
+        <div class="about-card">
+          <div class="about-card-badge">MY EXPERTISE</div>
+          <p class="about-card-text">Merging traditional Analytics with advanced Data Science to build stronger futures.</p>
+          <ul class="about-card-list">
+            <li>Leveraging machine learning methodologies to <span class="text-about-highlight">predict</span> emerging trends.</li>
+            <li>Generating actionable <span class="text-about-highlight">insights</span> via deep statistical integrity.</li>
+            <li>Engineering robust, scalable <span class="text-about-highlight">solutions</span> grounded in mathematics.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="education" class="content-section layout-right">
+    <h2 class="section-title animate-on-scroll"><span class="title-accent">MY</span> <span class="title-merge-target">EDUCATION</span></h2>
+    <div class="section-content animate-on-scroll">
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-card-badge">ACADEMIC</div>
+          <p class="about-card-text">Formal advanced education specializing in Data Intelligence and Analytics infrastructure.</p>
+          <ul class="about-card-list">
+            <li><strong>Master of Data Science</strong> – Deakin University <span class="text-about-highlight">(Exp Dec 2026)</span></li>
+            <li><strong>Post Graduate, Data Science & Analytics</strong> – Univ. of Texas at Austin 24-25 <span class="text-about-highlight">[GPA: 4.28]</span>
+              <div style="margin-top: 6px; opacity: 0.9; font-size: 0.9rem; display: flex; flex-wrap: wrap; gap: 10px;">
+                 <a href="https://la.utexas.edu/texasexeced/digitalVerification.html?key=bwvqdrnu" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Diploma</a> • 
+                 <a href="https://www.mygreatlearning.com/certificate/ILYOOXVJ" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Transcript May 2025</a> • 
+                 <a href="https://www.mygreatlearning.com/certificate/YKDPHNZO" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Bridge Course - Transcript Jan 2025</a>
+              </div>
+            </li>
+            <li><strong>BSC - Marketing</strong> – University of the Immaculate Conception (Dean’s Lister)</li>
+          </ul>
+        </div>
+        
+        <div class="about-card">
+          <div class="about-card-badge">CERTIFICATIONS</div>
+          <p class="about-card-text">Validating modern data tooling and visualization suites through recognized global institutions.</p>
+          <ul class="about-card-list">
+            <li><strong>Google Data Analytics</strong> Professional
+              <div style="margin-top: 6px; opacity: 0.9; font-size: 0.9rem; display: flex; flex-wrap: wrap; gap: 10px;">
+                 <a href="https://coursera.org/share/97723a29f962019356047fad38400766" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Certificate</a> • 
+                 <a href="https://www.credly.com/badges/468c6a9a-3c7d-40fd-be0a-9a9178c87cf7/linked_in_profile" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Credly Badge</a>
+              </div>
+            </li>
+            <li><strong>Google Finance</strong> Data Analyst Professional</li>
+            <li><strong>Apache Superset</strong> Hands On Certification</li>
+            <li><strong>Data Analytics</strong> for Business – LinkedInLearning</li>
+            <li><strong>Qlik Sense</strong> Essential Training – LinkedInLearning</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="projects" class="content-section layout-left">
+    <h2 class="section-title animate-on-scroll"><span class="title-accent">ANALYTICS</span> <span class="title-merge-target">PROJECTS</span></h2>
+    <div class="section-content animate-on-scroll">
+      <div class="section-tag" style="margin-top: 60px; margin-bottom: -30px;">Hover Over Projects to View Solutions</div>
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-card-badge">MACHINE LEARNING</div>
+          <ul class="about-card-list">
+            <li><a class="hover-trigger" data-popup="timeseries" href="#"><strong>Time Series Forecasting</strong> (EstateWines) <span class="text-about-highlight">[Nov 25]</span></a></li>
+            <li><a class="hover-trigger" data-popup="trade" href="#"><strong>Unsupervised Learning</strong> (Trade&Ahead) <span class="text-about-highlight">[Apr 25]</span></a></li>
+            <li><a class="hover-trigger" data-popup="renewind" href="#"><strong>Model Tuning</strong> (ReneWind) <span class="text-about-highlight">[Mar 25]</span></a></li>
+            <li><a class="hover-trigger" data-popup="easyvisa" href="#"><strong>Ensemble Techniques</strong> (EasyVisa) <span class="text-about-highlight">[Mar 25]</span></a></li>
+            <li><a class="hover-trigger" data-popup="innhotels" href="#"><strong>Supervised Classification</strong> (INN Hotels) <span class="text-about-highlight">[Feb 25]</span></a></li>
+            <li><a class="hover-trigger" data-popup="recell" href="#"><strong>Supervised Foundations</strong> (ReCell) <span class="text-about-highlight">[Jan 25]</span></a></li>
+            <li><a class="hover-trigger" data-popup="business" href="#"><strong>Business Statistics</strong> (E-news Express) <span class="text-about-highlight">[Dec 24]</span></a></li>
+            <li><a class="hover-trigger" data-popup="foodhub" href="#"><strong>Python Foundations</strong> (FoodHub Analysis) <span class="text-about-highlight">[Nov 24]</span></a></li>
+          </ul>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card-badge">VISUALIZATION</div>
+          <ul class="about-card-list">
+            <li><a class="hover-trigger" data-popup="knime" href="#"><strong>KNIME + Tableau RFM</strong> (Automobile) <span class="text-about-highlight">[Nov 25]</span></a></li>
+            <li><a class="hover-trigger" data-popup="mba" href="#"><strong>KNIME + Tableau MBA</strong> (Grocery Store) <span class="text-about-highlight">[Nov 25]</span></a></li>
+            <li><a class="hover-trigger" data-popup="gamers" href="#"><strong>Visual Analytics</strong> (Gamers Arena) <span class="text-about-highlight">[Sep 25]</span></a></li>
+            <li><a class="hover-trigger" data-popup="looker" href="#"><strong>Looker Studio Report</strong> (New Wheels) <span class="text-about-highlight">[Aug 25]</span></a></li>
+          </ul>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card-badge">SQL FOUNDATIONS</div>
+          <ul class="about-card-list">
+            <li><a href="#"><strong>Data Analytics with SQL</strong> (New Wheels) <span class="text-about-highlight">[Aug 25]</span></a></li>
+          </ul>
+        </div>
+
+        <div class="about-card">
+          <div class="about-card-badge">AI ENGINEERING</div>
+          <ul class="about-card-list">
+            <li><a href="#"><strong>Azure AI Foundry CLU</strong> <span class="text-about-highlight">[Apr 26]</span></a></li>
+            <li><a href="#"><strong>Azure Logic Apps</strong> (Fuzzy Logic) <span class="text-about-highlight">[Mar 26]</span></a></li>
+            <li><a href="#"><strong>AppScript Automation</strong> (Google Sheets) <span class="text-about-highlight">[Jan 26]</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="tools" class="content-section layout-right">
+    <h2 class="section-title animate-on-scroll"><span class="title-merge-target">TOOLS</span> <span class="title-accent">& TECH</span></h2>
+    <div class="section-content animate-on-scroll">
+      
+      <!-- Volumetric 3D Tools Carousel -->
+      <div class="tools-3d-scene">
+        <div class="tools-3d-track">
+          
+          <!-- Panel 1: AI & Compute -->
+          <div class="tools-3d-panel" style="--i:0;">
+            <div class="panel-label">AI & COMPUTE</div>
+            <div class="panel-chips">
+              <div class="tech-chip">Antigravity</div>
+              <div class="tech-chip">Azure AI Foundry</div>
+              <div class="tech-chip">Codex</div>
+              <div class="tech-chip">MS Azure</div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Core Stack -->
+          <div class="tools-3d-panel" style="--i:1;">
+            <div class="panel-label">CORE STACK</div>
+            <div class="panel-chips">
+              <div class="tech-chip">Python</div>
+              <div class="tech-chip">Jupyter</div>
+              <div class="tech-chip">MySQL</div>
+              <div class="tech-chip">Google Colab</div>
+              <div class="tech-chip">DBeaver</div>
+            </div>
+          </div>
+
+          <!-- Panel 3: Science -->
+          <div class="tools-3d-panel" style="--i:2;">
+            <div class="panel-label">DATA SCIENCE</div>
+            <div class="panel-chips">
+              <div class="tech-chip">NumPy</div>
+              <div class="tech-chip">Pandas</div>
+              <div class="tech-chip">scikit-learn</div>
+              <div class="tech-chip">statsmodels</div>
+            </div>
+          </div>
+
+          <!-- Panel 4: BI Elite -->
+          <div class="tools-3d-panel" style="--i:3;">
+            <div class="panel-label">BI SUITES</div>
+            <div class="panel-chips">
+              <div class="tech-chip">Tableau</div>
+              <div class="tech-chip">Power BI</div>
+              <div class="tech-chip">Looker Studio</div>
+              <div class="tech-chip">Qlik Sense</div>
+            </div>
+          </div>
+
+          <!-- Panel 5: Automation -->
+          <div class="tools-3d-panel" style="--i:4;">
+            <div class="panel-label">AUTOMATION</div>
+            <div class="panel-chips">
+              <div class="tech-chip">Apps Script</div>
+              <div class="tech-chip">KNIME</div>
+            </div>
+          </div>
+
+          <!-- Panel 6: Visual -->
+          <div class="tools-3d-panel" style="--i:5;">
+            <div class="panel-label">VISUALS</div>
+            <div class="panel-chips">
+              <div class="tech-chip">Plotly</div>
+              <div class="tech-chip">Matplotlib</div>
+              <div class="tech-chip">Superset</div>
+              <div class="tech-chip">Canva</div>
+            </div>
+          </div>
+
+          <!-- Panel 7: Workflows -->
+          <div class="tools-3d-panel" style="--i:6;">
+            <div class="panel-label">WORKFLOWS</div>
+            <div class="panel-chips">
+              <div class="tech-chip">Jira</div>
+              <div class="tech-chip">Confluence</div>
+              <div class="tech-chip">KNIME</div>
+              <div class="tech-chip">Rocketgate</div>
+              <div class="tech-chip">Sticky.io</div>
+            </div>
+          </div>
+
+          <!-- Panel 8: Logic -->
+          <div class="tools-3d-panel" style="--i:7;">
+            <div class="panel-label">PRODUCTIVITY</div>
+            <div class="panel-chips">
+              <div class="tech-chip">Excel</div>
+              <div class="tech-chip">Google Sheets</div>
+              <div class="tech-chip">Statistical Logic</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="section-tag" style="margin-top: 40px;">Hover to Pause Orbit</div>
+    </div>
+  </section>
+
+  <section id="ai-builds" class="content-section layout-left">
+    <h2 class="section-title animate-on-scroll"><span class="title-accent">AI</span> <span class="title-merge-target">BUILDS</span></h2>
+    <div class="section-content animate-on-scroll ai-builds-container">
+      
+      <!-- Left Column: 3D Stack Visual -->
+      <div class="ai-visual-column">
+        <div class="ai-scene-container">
+          <div class="ai-volumetric-stack" id="ai-volumetric-stack">
+            
+            <!-- Layer 4: Bottom -->
+            <div class="ai-block-layer l4" data-build="sound-card">
+              <div class="block-side block-front">V8 Sound Card App</div>
+              <div class="block-side block-left"></div>
+              <div class="block-side block-top"></div>
+            </div>
+
+            <!-- Layer 3 -->
+            <div class="ai-block-layer l3" data-build="invoice-tracker">
+              <div class="block-side block-front">Invoice Tracker</div>
+              <div class="block-side block-left"></div>
+              <div class="block-side block-top"></div>
+            </div>
+
+            <!-- Layer 2 -->
+            <div class="ai-block-layer l2" data-build="finance-tracker">
+              <div class="block-side block-front">Finance Tracker</div>
+              <div class="block-side block-left"></div>
+              <div class="block-side block-top"></div>
+            </div>
+
+            <!-- Layer 1: Top (Placed Last in DOM for Absolute Topmost Raster Priority) -->
+            <div class="ai-block-layer l1 active" data-build="hr-ecosystem">
+              <div class="block-side block-front">HR Assistant Ecosystem</div>
+              <div class="block-side block-left"></div>
+              <div class="block-side block-top">AI CORE</div>
+            </div>
+
+          </div>
+        </div>
+        <div class="section-tag" style="margin-top: 40px;">Hover Layers to Inspect Architecture</div>
+      </div>
+
+      <!-- Right Column: Dynamic Description Card Stack -->
+      <div class="ai-details-column">
+        <div class="ai-detail-deck" id="ai-detail-deck">
+          
+          <!-- Detail Card 1: HR -->
+          <div class="ai-detail-card active" id="desc-hr-ecosystem">
+            <div class="about-card-badge">HR ECOSYSTEM</div>
+            <h3>HR Assistant Platform</h3>
+            <p class="about-card-text">Centralized HR operations designed to modernize employee management, leave workflows, and analytics.</p>
+            
+            <ul class="about-card-list" style="margin: 15px 0;">
+              <li><strong>Built with:</strong> Apps Script, Google Sheets Architecture, Modular Backend, Role-Based Security, AI workflow optimization.</li>
+              <li><strong>Capabilities:</strong> Leave Request Automation, Executive Dashboards, HR Reporting Automation, Pulse & Engagement Tracking.</li>
+            </ul>
+            <div class="impact-tag"><strong>IMPACT:</strong> Eliminates fragmented processes and provides real-time workforce intelligence via scalable lightweight ecosystem.</div>
+          </div>
+
+          <!-- Detail Card 2: Finance -->
+          <div class="ai-detail-card" id="desc-finance-tracker">
+            <div class="about-card-badge" style="color: #ff3f3b; border-color: #ff3f3b;">FINANCE ENGINE</div>
+            <h3>Operational Finance Tracker</h3>
+            <p class="about-card-text">System engineered to simplify monitoring, budget tracking, and reporting across daily operational cycles.</p>
+            <ul class="about-card-list" style="margin: 15px 0;">
+              <li><strong>Capabilities:</strong> Expense Monitoring, Budget Tracking, Financial Summary Dashboards, Automated Reporting, Operational Cost Visibility.</li>
+            </ul>
+            <div class="impact-tag"><strong>IMPACT:</strong> Reduces spreadsheet dependency and improves financial visibility for accelerated operational decision-making.</div>
+          </div>
+
+          <!-- Detail Card 3: Invoice -->
+          <div class="ai-detail-card" id="desc-invoice-tracker">
+            <div class="about-card-badge" style="color: #7B61FF; border-color: #7B61FF;">RECONCILIATION</div>
+            <h3>Invoice Tracker Utility</h3>
+            <p class="about-card-text">Structured invoice management solution optimizing visibility and tracking across standard financial flows.</p>
+            <ul class="about-card-list" style="margin: 15px 0;">
+              <li><strong>Capabilities:</strong> Invoice Status Monitoring, Reconciliation Tracking, Vendor Invoice Mgmt, Outstanding Monitoring, Workflow Automation.</li>
+            </ul>
+            <div class="impact-tag"><strong>IMPACT:</strong> Solves tracking inconsistencies and fragmented reconciliation while improving overall operational accountability.</div>
+          </div>
+
+          <!-- Detail Card 4: Sound Card -->
+          <div class="ai-detail-card" id="desc-sound-card">
+            <div class="about-card-badge" style="color: #1fb6e6; border-color: #1fb6e6;">AUDIO INTERFACE</div>
+            <h3>V8 Sound Card Application</h3>
+            <p class="about-card-text">Custom utility app tailored to boost interaction efficiency and management of sound card configuration.</p>
+            <ul class="about-card-list" style="margin: 15px 0;">
+              <li><strong>Capabilities:</strong> Simplified Audio Controls, Workflow-Oriented Interface, Real-Time Interaction, Streamlined Operational Design.</li>
+            </ul>
+            <div class="impact-tag"><strong>IMPACT:</strong> Simplifies repetitive configuration tasks, providing an intuitive and far more efficient operating experience.</div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="exposure" class="content-section layout-right">
+    <h2 class="section-title animate-on-scroll"><span class="title-accent">TECHNICAL</span> <span class="title-merge-target">EXPOSURE</span></h2>
+    <div class="section-content animate-on-scroll">
+      
+      <div class="about-grid">
+
+        <!-- Experience Block 1: Data Analyst -->
+        <div class="about-card">
+          <div class="about-card-badge">DATA ANALYST</div>
+          <p class="about-card-text" style="margin-top: 10px;">
+            <strong>Connect Resources, Dubai, UAE</strong><br>
+            <span class="text-about-highlight">Sept 2021 - Present &bull; 4.7 Years</span>
+          </p>
+          <ul class="about-card-list" style="margin-top: 15px;">
+            <li>Automated recurring Qlik/Tableau/Excel analyses and optimized data models, <strong>cutting analyst workload by 60%</strong>.</li>
+            <li>Built one page insight dashboards with minimal filters. <strong>Cut weekly reporting time by 65% and improved decision speed</strong>.</li>
+            <li><strong>Cut BI costs</strong> by migrating suitable use cases to Looker Studio, maintaining data security, saving thousands without quality loss.</li>
+            <li>Built Risk Mitigation dashboards for analysts and executives (chargeback & fraud KPIs, thresholds, alerts) and delivered bank ready decks combining descriptive and prescriptive insights surfaced previously unseen leakage points <strong>that drove corrective actions</strong>.</li>
+            <li><strong>Developed and maintained end to end HR analytics</strong> dashboards, supporting monthly reporting and strategic decision making.</li>
+            <li>Implemented KNIME based automation, <strong>achieving a 90% reduction in repetitive manual tasks</strong>.</li>
+            <li>Used historical data insights to support operations and ensure chargeback/fraud ratios remained compliant.</li>
+            <li>Created tracking reports, case summaries, and ad hoc insights with Excel, Sheets, Looker Studio, Qlik Sense, Jira, and SQL.</li>
+            <li>Maintained the company's BI environment and delivered clear, self service visualizations for non technical users.</li>
+          </ul>
+        </div>
+
+        <!-- Experience Block 2: Team Leader -->
+        <div class="about-card">
+          <div class="about-card-badge">CS/OST TEAM LEADER</div>
+          <p class="about-card-text" style="margin-top: 10px;">
+            <strong>Connect Resources, Dubai, UAE</strong><br>
+            <span class="text-about-highlight">Oct 2016 - Sep 2021 &bull; 5 Years</span>
+          </p>
+          <ul class="about-card-list" style="margin-top: 15px;">
+            <li>Led 50+ specialists, driving data operations, quality standards, workload management, and onboarding.</li>
+            <li>Converted scattered requests into structured datasets and visuals to inform leadership decisions and account strategy.</li>
+          </ul>
+        </div>
+
+        <!-- Experience Block 3: IT Specialist -->
+        <div class="about-card">
+          <div class="about-card-badge">SENIOR IT SPECIALIST</div>
+          <p class="about-card-text" style="margin-top: 10px;">
+            <strong>Sutherland - Microsoft, Philippines</strong><br>
+            <span class="text-about-highlight">Sept 2012 - Jul 2014</span>
+          </p>
+          <ul class="about-card-list" style="margin-top: 15px;">
+            <li>Specialized in Windows OS and hardware/software support, resolving issues quickly and exceeding customer expectations.</li>
+            <li>Support to 10-15 Level 1 Technicians. Exceeding good customer satisfaction rate as a team.</li>
+          </ul>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <section id="testimonials" class="content-section layout-left">
+    <h2 class="section-title animate-on-scroll"><span class="title-merge-target">TESTIMONIALS</span></h2>
+    <div class="section-content animate-on-scroll">
+      
+      <div class="about-grid">
+
+        <!-- Professional Feedback 1 -->
+        <div class="about-card testimonial-card">
+          <div style="color: #FFB800; font-size: 1.2rem; letter-spacing: 2px; margin-bottom: 5px;">★★★★★</div>
+          <div class="about-card-badge">LINKEDIN RECOMMENDATION</div>
+          <p class="about-card-text" style="font-style: italic; line-height: 1.6; color: rgba(255,255,255,0.9);">
+            "I had the opportunity to work closely with him on analytics initiatives, and what stood out most was his curiosity and drive to learn. Coming from a non-analytics background, he invested significant effort into building his skills from the ground up and quickly became highly capable in data analysis and visualization.<br><br>
+            He is someone who follows through reliably, communicates clearly, and can be trusted to deliver high-quality work with minimal supervision. His dashboards were not only technically sound but also thoughtfully designed and easy to interpret... I would highly recommend him to any organization looking for a dependable and self-driven analytics professional."
+          </p>
+          <div style="margin-top: auto; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05);">
+            <strong style="color: #ffffff; font-size: 0.95rem;">Ashutosh Paliwal</strong>
+            <div style="color: #ff3f3b; font-size: 0.8rem; margin-top: 3px;">Head of Analytics</div>
+          </div>
+        </div>
+
+        <!-- Professional Feedback 2 -->
+        <div class="about-card testimonial-card">
+          <div style="color: #FFB800; font-size: 1.2rem; letter-spacing: 2px; margin-bottom: 5px;">★★★★★</div>
+          <div class="about-card-badge">TEAM ENDORSEMENT</div>
+          <p class="about-card-text" style="font-style: italic; line-height: 1.6; color: rgba(255,255,255,0.9);">
+            "I had the pleasure of working with Joseph Anthony on several projects, and he consistently impressed me with his professionalism, deep knowledge, and commitment to excellence. He brings creative solutions to complex challenges and always supports the team with a positive attitude. Joseph's strong communication and analytical skills make him a valuable asset to any organization."
+          </p>
+          <div style="margin-top: auto; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05);">
+            <strong style="color: #ffffff; font-size: 0.95rem;">Ahmad Chokr</strong>
+            <div style="color: #ff3f3b; font-size: 0.8rem; margin-top: 3px;">Expert in Data, Product, Risk, & Fraud Analytics</div>
+          </div>
+        </div>
+
+        <!-- Academic Feedback 1 -->
+        <div class="about-card testimonial-card">
+          <div style="color: #FFB800; font-size: 1.2rem; letter-spacing: 2px; margin-bottom: 5px;">★★★★★</div>
+          <div class="about-card-badge">ACADEMIC MODERATOR</div>
+          <p class="about-card-text" style="font-style: italic; line-height: 1.6; color: rgba(255,255,255,0.9);">
+            "I am thoroughly impressed with your performance on this assignment. Your demonstration of proficiency shines through in the flawless execution of all necessary steps. The clarity and coherence with which you have aligned your concepts with the assignment criteria are exemplary, showcasing a deep understanding of the material. Achieving a perfect score of 60 reflects your exceptional attention to detail and commitment to excellence."
+          </p>
+          <div style="margin-top: auto; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05);">
+            <strong style="color: #ffffff; font-size: 0.95rem;">Moderator</strong>
+            <div style="color: #ff3f3b; font-size: 0.8rem; margin-top: 3px;">TSF Project Assignment - Nov 2025</div>
+          </div>
+        </div>
+
+        <!-- Academic Feedback 2 -->
+        <div class="about-card testimonial-card">
+          <div style="color: #FFB800; font-size: 1.2rem; letter-spacing: 2px; margin-bottom: 5px;">★★★★★</div>
+          <div class="about-card-badge">INSTRUCTOR EVALUATION</div>
+          <p class="about-card-text" style="font-style: italic; font-size: 0.82rem; line-height: 1.5; margin-bottom: 10px;">
+            "Areas Performed Well:"
+          </p>
+          <ul class="about-card-list" style="font-size: 0.82rem; gap: 6px;">
+            <li>Understanding visual analytics data from Business point of view.</li>
+            <li>Imputing data after optimal validation splitting.</li>
+            <li>Training 6+ distinct model arrays on full sampled sets.</li>
+            <li>Performance tuning and model comparison metric optimization.</li>
+            <li>Detailed insights and quality markdown infrastructure.</li>
+          </ul>
+          <div style="margin-top: auto; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05);">
+            <strong style="color: #ffffff; font-size: 0.95rem;">Moderator</strong>
+            <div style="color: #ff3f3b; font-size: 0.8rem; margin-top: 3px;">Evaluator - ReneWind Project</div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <section id="contact" class="content-section layout-right">
+    <h2 class="section-title animate-on-scroll"><span class="title-accent">REACH</span> <span class="title-merge-target">OUT</span></h2>
+    <div class="section-content animate-on-scroll">
+      
+      <div class="reach-out-grid">
+        <!-- LEFT SIDE: Interactive Connect Data -->
+        <div class="reach-out-info">
+          <h3 class="reach-headline-gradient">Let's Work Together</h3>
+          <div class="reach-meta-block">
+            <div class="reach-label">Phone</div>
+            <a href="tel:+971566926959" class="reach-link">+971 56 692 6959</a>
+          </div>
+
+          <div class="reach-meta-block" style="margin-top: 30px;">
+            <div class="reach-label">Email</div>
+            <a href="mailto:josephtananthony@gmail.com" class="reach-link email-link">josephtananthony@gmail.com</a>
+          </div>
+
+          <!-- Social Grid Ecosystem -->
+          <div class="reach-social-deck">
+            <a href="https://www.linkedin.com/in/josephanthonytan/?_l=en_US" target="_blank" class="social-vessel icon-linkedin" title="LinkedIn Profile">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://gist.github.com/Joseph-AT" target="_blank" class="social-vessel icon-github" title="GitHub Portal">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://public.tableau.com/app/profile/joseph.anthony.tan/vizzes" target="_blank" class="social-vessel icon-tableau" title="Tableau Data Vault">
+              <svg viewBox="0 0 24 24" fill="currentColor" style="width: 28px; height: 28px; opacity: 1;"><path d="M11.026 13.962v-1.772H9.27v-1.042h1.755V9.375h1.026v1.773H13.8v1.042h-1.748v1.772z"/><path d="M4.822 12.977V11.92H3.766v-.627h1.056v-1.056h.627v1.056h1.056v.627H5.449v1.056zM17.444 12.977V11.92h-1.056v-.627h1.056v-1.056h.627v1.056H19.13v.627h-1.058v1.056zM11.11 21.425v-1.056H10.05v-.628h1.058v-1.056h.626v1.056H12.79v.628h-1.056v1.056zM11.11 7.205V6.149H10.05v-.628h1.058V4.465h.626v1.056H12.79v.628h-1.056V7.205zM15.426 17.185v-1.057h-1.058v-.626h1.058v-1.056h.627v1.056H17.11v.626h-1.058v1.057zM6.937 17.185v-1.057H5.88v-.626H6.94v-1.056h.627v1.056h1.056v.626H7.565v1.057zM15.426 8.763v-1.056h-1.058v-.627h1.058V6.024h.627v1.056H17.11v.627h-1.058v1.056zM6.937 8.763v-1.056H5.88v-.627H6.94V6.024h.627v1.056h1.056v.627H7.565v1.056z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- Custom Cursor System -->
+  <div id="custom-cursor-container">
+    <div class="cursor-trail trail-3"></div>
+    <div class="cursor-trail trail-2"></div>
+    <div class="cursor-trail trail-1"></div>
+    <div class="cursor-ring">
+      <div class="cursor-orbit-dot"></div>
+    </div>
+  </div>
+
+  <script>
+    // Custom Cursor Logic - Pure Vanilla JS High Performance
+    (function() {
+      const ring = document.querySelector(".cursor-ring");
+      const trail1 = document.querySelector(".trail-1");
+      const trail2 = document.querySelector(".trail-2");
+      const trail3 = document.querySelector(".trail-3");
+
+      if (!ring || !trail1 || !trail2 || !trail3) return;
+
+      // Start at the center of the screen
+      let mouseX = window.innerWidth / 2;
+      let mouseY = window.innerHeight / 2;
+      
+      let ringX = mouseX, ringY = mouseY;
+      let t1X = mouseX, t1Y = mouseY;
+      let t2X = mouseX, t2Y = mouseY;
+      let t3X = mouseX, t3Y = mouseY;
+
+      let angle = 0;
+
+      window.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+
+      function render() {
+        // Ultra-responsive main ring (almost instantaneous tracking)
+        ringX += (mouseX - ringX) * 0.85;
+        ringY += (mouseY - ringY) * 0.85;
+        
+        // Smooth trailing physics for the comet effect
+        t1X += (ringX - t1X) * 0.5;
+        t1Y += (ringY - t1Y) * 0.5;
+        
+        t2X += (t1X - t2X) * 0.4;
+        t2Y += (t1Y - t2Y) * 0.4;
+        
+        t3X += (t2X - t3X) * 0.3;
+        t3Y += (t2Y - t3Y) * 0.3;
+
+        angle += 3;
+
+        // Apply transforms directly to the DOM for max performance
+        ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%) rotate(${angle}deg)`;
+        trail1.style.transform = `translate(${t1X}px, ${t1Y}px) translate(-50%, -50%)`;
+        trail2.style.transform = `translate(${t2X}px, ${t2Y}px) translate(-50%, -50%)`;
+        trail3.style.transform = `translate(${t3X}px, ${t3Y}px) translate(-50%, -50%)`;
+
+        requestAnimationFrame(render);
+      }
+      
+      // Kick off the render loop
+      requestAnimationFrame(render);
+    })();
+  </script>
+
+  <div id="project-popup" class="project-popup">
+    <div class="popup-content" id="popup-content-timeseries" style="display: none;">
+      <div class="popup-left">
+        <h3 class="popup-title">EstateWines – Demand Forecasting System</h3>
+        <p class="popup-subtitle">Project Name: EstateWines – Time Series Sales Forecasting</p>
+        
+        <h4 class="popup-section-title">PROBLEM STATEMENT</h4>
+        <p class="popup-text">Develop a forecasting model to predict future wine sales demand and support inventory and business planning decisions.</p>
+        
+        <h4 class="popup-section-title">BUSINESS PROBLEM</h4>
+        <p class="popup-text">EstateWines needed a reliable way to forecast product demand due to fluctuating sales patterns and inventory challenges. Manual forecasting methods made it difficult to optimize stock levels and business operations.</p>
+        
+        <h4 class="popup-section-title">RESOLUTION IMPLEMENTED <i class="fa-solid fa-check" style="color: #00d2ff; margin-left: 5px;"></i></h4>
+        <p class="popup-text">Built a time series forecasting model using historical sales data to analyze trends, seasonality, and future demand patterns.</p>
+        
+        <h4 class="popup-section-title">BUSINESS IMPACT <i class="fa-solid fa-check" style="color: #00d2ff; margin-left: 5px;"></i></h4>
+        <ul class="popup-list">
+          <li>Improved inventory planning and stock management</li>
+          <li>Reduced overstocking and stock shortages</li>
+          <li>Supported data-driven forecasting decisions</li>
+          <li>Enhanced operational efficiency</li>
+          <li>Improved sales demand visibility</li>
+        </ul>
+      </div>
+      <div class="popup-right">
+        <h4 class="popup-section-title">KEY ANALYTICAL APPROACHES</h4>
+        <ul class="popup-list popup-list--spaced">
+          <li>Time Series Forecasting</li>
+          <li>Trend & Seasonality Analysis</li>
+          <li>Exploratory Data Analysis (EDA)</li>
+          <li>Data Preprocessing</li>
+          <li>Forecast Evaluation</li>
+        </ul>
+        
+        <h4 class="popup-section-title" style="margin-top: 30px;">SKILLS ACQUIRED</h4>
+        <ul class="popup-list popup-list--spaced">
+          <li>Forecasting Analytics</li>
+          <li>Predictive Modeling</li>
+          <li>Business Intelligence</li>
+          <li>Statistical Analysis</li>
+          <li>Data Visualization</li>
+        </ul>
+        
+        <h4 class="popup-section-title" style="margin-top: 30px;">TOOLS & TECHNOLOGIES</h4>
+        <ul class="popup-list">
+          <li>Python - Pandas - NumPy - Matplotlib - Seaborn - Statsmodels - Jupyter Notebook</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="popup-content" id="popup-content-recell" style="display: none;">
+      <div class="popup-left">
+        <h3 class="popup-title">ReCell – Used Device Pricing Prediction</h3>
+        <p class="popup-subtitle">Project Name: ReCell – Supervised Learning Model</p>
+        
+        <h4 class="popup-section-title">PROBLEM STATEMENT</h4>
+        <p class="popup-text">Develop a machine learning model to predict the price of used and refurbished mobile devices based on product specifications and market factors.</p>
+        
+        <h4 class="popup-section-title">BUSINESS PROBLEM</h4>
+        <p class="popup-text">ReCell needed a data-driven solution to accurately estimate resale prices of used devices. Inconsistent pricing affected profitability, competitiveness, and customer trust.</p>
+        
+        <h4 class="popup-section-title">RESOLUTION IMPLEMENTED <i class="fa-solid fa-check" style="color: #00d2ff; margin-left: 5px;"></i></h4>
+        <p class="popup-text">Built a supervised learning predictive model to analyze device features and determine estimated resale values with improved accuracy.</p>
+        
+        <h4 class="popup-section-title">BUSINESS IMPACT <i class="fa-solid fa-check" style="color: #00d2ff; margin-left: 5px;"></i></h4>
+        <ul class="popup-list">
+          <li>Improved pricing consistency and accuracy</li>
+          <li>Supported better resale and procurement decisions</li>
+          <li>Reduced risk of underpricing or overpricing devices</li>
+          <li>Enhanced business competitiveness</li>
+          <li>Enabled data-driven pricing strategies</li>
+        </ul>
+      </div>
+      <div class="popup-right">
+        <h4 class="popup-section-title">KEY ANALYTICAL APPROACHES</h4>
+        <ul class="popup-list popup-list--spaced">
+          <li>Supervised Machine Learning</li>
+          <li>Regression Modeling</li>
+          <li>Exploratory Data Analysis (EDA)</li>
+          <li>Feature Engineering</li>
+          <li>Model Evaluation</li>
+        </ul>
+        
+        <h4 class="popup-section-title" style="margin-top: 30px;">SKILLS ACQUIRED</h4>
+        <ul class="popup-list popup-list--spaced">
+          <li>Predictive Analytics</li>
+          <li>Machine Learning</li>
+          <li>Regression Techniques</li>
+          <li>Data Visualization</li>
+          <li>Business Problem Solving</li>
+        </ul>
+        
+        <h4 class="popup-section-title" style="margin-top: 30px;">TOOLS & TECHNOLOGIES</h4>
+        <ul class="popup-list">
+          <li>Python - Pandas - NumPy - Scikit-learn - Matplotlib - Seaborn - Jupyter Notebook</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="popup-content" id="popup-content-business" style="display: none;">
+      <div class="popup-left">
+        <h3 class="popup-title">Business Statistics & A/B Testing Analytics</h3>
+        <p class="popup-subtitle">Project Name: E-News Express – Landing Page Effectiveness Analysis</p>
+        
+        <h4 class="popup-section-title">PROBLEM STATEMENT</h4>
+        <p class="popup-text">Analyze customer engagement data through A/B Testing to determine whether a newly designed landing page improves user engagement and increases subscription conversions for E-News Express.</p>
+        
+        <h4 class="popup-section-title">BUSINESS PROBLEM</h4>
+        <p class="popup-text">E-News Express experienced a decline in monthly subscribers and suspected that the current website landing page was no longer engaging enough for visitors. The business needed a data-driven approach to validate whether a redesigned landing page with improved content and layout could increase user engagement and subscription rates.</p>
+        
+        <h4 class="popup-section-title">RESOLUTION IMPLEMENTED <i class="fa-solid fa-check" style="color: #00d2ff; margin-left: 5px;"></i></h4>
+        <p class="popup-text">Conducted a full Business Statistics and A/B Testing analysis comparing the existing landing page (Control Group) versus the newly designed landing page (Treatment Group). Statistical techniques were applied to evaluate customer behavior, engagement duration, and conversion effectiveness between both webpage versions.</p>
+        
+        <h4 class="popup-section-title">BUSINESS IMPACT <i class="fa-solid fa-check" style="color: #00d2ff; margin-left: 5px;"></i></h4>
+        <ul class="popup-list">
+          <li>Enabled E-News Express to make data-driven decisions regarding website redesign investments.</li>
+          <li>Identified whether the new landing page generated stronger customer engagement and improved subscription behavior.</li>
+          <li>Reduced reliance on assumptions by validating webpage performance through statistical analysis.</li>
+          <li>Helped stakeholders understand visitor interaction patterns and optimize digital customer acquisition strategies.</li>
+          <li>Demonstrated how A/B Testing can be leveraged to improve conversion-focused digital experiences.</li>
+        </ul>
+      </div>
+      <div class="popup-right">
+        <h4 class="popup-section-title">KEY ANALYTICAL APPROACHES</h4>
+        <ul class="popup-list popup-list--spaced">
+          <li>A/B Testing</li>
+          <li>Hypothesis Testing</li>
+          <li>Statistical Analysis</li>
+          <li>Customer Engagement Analysis</li>
+          <li>Conversion Performance Evaluation</li>
+          <li>Experimental Design</li>
+        </ul>
+        
+        <h4 class="popup-section-title" style="margin-top: 30px;">SKILLS ACQUIRED</h4>
+        <ul class="popup-list popup-list--spaced">
+          <li>Business Statistics</li>
+          <li>A/B Testing</li>
+          <li>Hypothesis Testing</li>
+          <li>Data Interpretation</li>
+          <li>Statistical Decision Making</li>
+          <li>Business Analytics</li>
+        </ul>
+        
+        <h4 class="popup-section-title" style="margin-top: 30px;">TOOLS & TECHNOLOGIES</h4>
+        <ul class="popup-list">
+          <li>Python - Pandas - NumPy - SciPy - Matplotlib - Seaborn - Statistical Testing Techniques</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="popup-content" id="popup-content-foodhub" style="display: none;">
+      <div class="popup-left">
+        <h3 class="popup-title">FoodHub Order Analysis & Customer Insights</h3>
+        <p class="popup-subtitle">Project Name: FoodHub – Exploratory Data Analysis (EDA)</p>
+        
+        <h4 class="popup-section-title">PROBLEM STATEMENT</h4>
+        <p class="popup-text">Analyze FoodHub’s online food delivery data to identify customer ordering behaviors, restaurant performance, delivery trends, and business opportunities that can help improve customer satisfaction and operational efficiency.</p>
+        
+        <h4 class="popup-section-title">BUSINESS PROBLEM</h4>
+        <p class="popup-text">FoodHub operates in a highly competitive online food delivery market where customer experience, delivery efficiency, and restaurant performance directly impact retention and profitability. The company needed to better understand customer ordering patterns, peak demand behavior, delivery timelines, and restaurant performance to support business growth and improve operational decision-making.</p>
+        
+        <h4 class="popup-section-title">RESOLUTION IMPLEMENTED <i class="fa-solid fa-check" style="color: #00d2ff; margin-left: 5px;"></i></h4>
+        <p class="popup-text">Performed a comprehensive Exploratory Data Analysis (EDA) on FoodHub’s order and customer transaction data to uncover actionable insights related to customer behavior, delivery performance, restaurant demand, ratings, and order trends. Data visualization and statistical exploration techniques were used to identify operational bottlenecks and customer engagement opportunities.</p>
+        
+        <h4 class="popup-section-title">BUSINESS IMPACT <i class="fa-solid fa-check" style="color: #00d2ff; margin-left: 5px;"></i></h4>
+        <ul class="popup-list">
+          <li>Helped identify top-performing restaurants and high-frequency customers.</li>
+          <li>Enabled the business to better understand customer ordering habits and peak operational periods.</li>
+          <li>Supported operational improvements by analyzing food preparation and delivery performance.</li>
+          <li>Provided insights that can improve customer satisfaction and delivery efficiency.</li>
+          <li>Assisted management in making data-driven decisions related to restaurant partnerships, promotions, and customer retention strategies.</li>
+          <li>Revealed recurring customer behaviors that could support loyalty and voucher campaigns.</li>
+        </ul>
+      </div>
+      <div class="popup-right">
+        <h4 class="popup-section-title">KEY ANALYTICAL APPROACHES</h4>
+        <ul class="popup-list popup-list--spaced">
+          <li>Exploratory Data Analysis (EDA)</li>
+          <li>Customer Behavior Analysis</li>
+          <li>Restaurant Performance Analysis</li>
+          <li>Delivery Trend Analysis</li>
+          <li>Multivariate Analysis</li>
+          <li>Data Visualization</li>
+        </ul>
+        
+        <h4 class="popup-section-title" style="margin-top: 30px;">SKILLS ACQUIRED</h4>
+        <ul class="popup-list popup-list--spaced">
+          <li>Python Data Analysis</li>
+          <li>Business Intelligence</li>
+          <li>Customer Analytics</li>
+          <li>Data Visualization</li>
+          <li>Statistical Interpretation</li>
+          <li>Insight Generation</li>
+        </ul>
+        
+        <h4 class="popup-section-title" style="margin-top: 30px;">TOOLS & TECHNOLOGIES</h4>
+        <ul class="popup-list">
+          <li>Python - Pandas - NumPy - Matplotlib - Seaborn - Jupyter Notebook</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="popup-content" id="popup-content-innhotels" style="display: none;">
+      <div class="popup-left">
+        <h3 class="popup-title">Hotel Booking Cancellation Prediction & Customer Behavior Analysis</h3>
+        <p class="popup-subtitle">Project Name: INN Hotels – Supervised Learning Classification</p>
+        
+        <h4 class="popup-section-title">PROBLEM STATEMENT</h4>
+        <p class="popup-text">Analyze hotel booking data to identify factors influencing cancellations and develop a machine learning model that predicts which bookings are likely to be canceled.</p>
+        
+        <h4 class="popup-section-title">BUSINESS PROBLEM</h4>
+        <p class="popup-text">INN Hotels was experiencing high booking cancellation rates, leading to revenue loss, inefficient room allocation, operational disruptions, and reduced profitability. The business needed a data-driven solution to better understand customer booking behavior and proactively manage cancellations.</p>
+        
+        <h4 class="popup-section-title">RESOLUTION IMPLEMENTED <i class="fa-solid fa-check" style="color: #00d2ff; margin-left: 5px;"></i></h4>
+        <p class="popup-text">Performed supervised learning and booking behavior analysis using hotel reservation data. Applied data preprocessing, exploratory analysis, feature engineering, and classification modeling to identify cancellation patterns and predict high-risk bookings in advance.</p>
+        
+        <h4 class="popup-section-title">BUSINESS IMPACT <i class="fa-solid fa-check" style="color: #00d2ff; margin-left: 5px;"></i></h4>
+        <ul class="popup-list">
+          <li>Identified major factors contributing to booking cancellations</li>
+          <li>Enabled proactive prediction of high-risk cancellations</li>
+          <li>Improved occupancy and room allocation planning</li>
+          <li>Reduced potential revenue loss from last-minute cancellations</li>
+          <li>Supported smarter cancellation and refund strategies</li>
+          <li>Improved operational and revenue management decisions</li>
+        </ul>
+      </div>
+      <div class="popup-right">
+        <h4 class="popup-section-title">KEY ANALYTICAL APPROACHES</h4>
+        <ul class="popup-list popup-list--spaced">
+          <li>Supervised Learning Classification</li>
+          <li>Predictive Modeling</li>
+          <li>Customer Booking Behavior Analysis</li>
+          <li>Exploratory Data Analysis (EDA)</li>
+          <li>Feature Engineering</li>
+          <li>Model Performance Evaluation</li>
+        </ul>
+        
+        <h4 class="popup-section-title" style="margin-top: 30px;">SKILLS ACQUIRED</h4>
+        <ul class="popup-list popup-list--spaced">
+          <li>Machine Learning Classification</li>
+          <li>Predictive Analytics</li>
+          <li>Hospitality Data Analysis</li>
+          <li>Customer Behavior Analysis</li>
+          <li>Data Visualization</li>
+          <li>Business Intelligence</li>
+        </ul>
+        
+        <h4 class="popup-section-title" style="margin-top: 30px;">TOOLS & TECHNOLOGIES</h4>
+        <ul class="popup-list">
+          <li>Python - Pandas - NumPy - Matplotlib - Seaborn - Scikit-learn - Jupyter Notebook</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="popup-content" id="popup-content-trade" style="display: none;">
+      <div class="popup-left">
+        <h3 class="popup-title">Trade&Ahead – Stock Market Prediction & Portfolio Analysis</h3>
+        <p class="popup-subtitle">Project Name: Trade&Ahead – Financial Market Predictive Modeling</p>
+        
+        <h4 class="popup-section-title">PROBLEM STATEMENT</h4>
+        <p class="popup-text">Analyze stock market and financial data to identify investment patterns and develop predictive models that support smarter trading and portfolio decisions.</p>
+        
+        <h4 class="popup-section-title">BUSINESS PROBLEM</h4>
+        <p class="popup-text">Investors and traders often struggle to make informed decisions due to volatile market behavior and large volumes of financial data. The business needed a predictive analytics solution to identify trends, reduce risk, and improve investment strategies.</p>
+        
+        <h4 class="popup-section-title">RESOLUTION IMPLEMENTED <i class="fa-solid fa-check" style="color: #00d2ff; margin-left: 5px;"></i></h4>
+        <p class="popup-text">Performed financial data analysis and predictive modeling using historical market data. Applied machine learning, exploratory analysis, and trend evaluation techniques to identify market behavior and support investment decision-making.</p>
+        
+        <h4 class="popup-section-title">BUSINESS IMPACT <i class="fa-solid fa-check" style="color: #00d2ff; margin-left: 5px;"></i></h4>
+        <ul class="popup-list">
+          <li>Improved visibility into market trends and stock behavior</li>
+          <li>Supported data-driven investment decisions</li>
+          <li>Enhanced portfolio risk assessment and monitoring</li>
+          <li>Helped identify potential high-performing opportunities</li>
+          <li>Improved financial forecasting and trading insights</li>
+        </ul>
+      </div>
+      <div class="popup-right">
+        <h4 class="popup-section-title">KEY ANALYTICAL APPROACHES</h4>
+        <ul class="popup-list popup-list--spaced">
+          <li>Predictive Modeling</li>
+          <li>Financial Data Analysis</li>
+          <li>Time Series & Trend Analysis</li>
+          <li>Exploratory Data Analysis (EDA)</li>
+          <li>Machine Learning</li>
+        </ul>
+        
+        <h4 class="popup-section-title" style="margin-top: 30px;">SKILLS ACQUIRED</h4>
+        <ul class="popup-list popup-list--spaced">
+          <li>Financial Analytics</li>
+          <li>Predictive Analytics</li>
+          <li>Data Visualization</li>
+          <li>Machine Learning</li>
+          <li>Risk Analysis</li>
+        </ul>
+        
+        <h4 class="popup-section-title" style="margin-top: 30px;">TOOLS & TECHNOLOGIES</h4>
+        <ul class="popup-list">
+          <li>Python - Pandas - NumPy - Matplotlib - Seaborn - Scikit-learn - Jupyter Notebook</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="popup-content" id="popup-content-renewind" style="display: none;">
+      <div class="popup-left">
+        <h3 class="popup-title">ReneWind – Renewable Energy Predictive Maintenance</h3>
+        <p class="popup-subtitle">Project Name: ReneWind – Predictive Maintenance for Wind Turbines</p>
+        
+        <h4 class="popup-section-title">PROBLEM STATEMENT</h4>
+        <p class="popup-text">Develop a machine learning solution to predict wind turbine failures and support proactive maintenance planning using operational sensor data.</p>
+        
+        <h4 class="popup-section-title">BUSINESS PROBLEM</h4>
+        <p class="popup-text">Unexpected wind turbine failures can lead to costly downtime, operational disruptions, and maintenance expenses. The business needed a predictive system to detect potential failures early and improve maintenance efficiency.</p>
+        
+        <h4 class="popup-section-title">RESOLUTION IMPLEMENTED <i class="fa-solid fa-check" style="color: #00d2ff; margin-left: 5px;"></i></h4>
+        <p class="popup-text">Performed data analysis and built predictive machine learning models using turbine operational data to identify potential equipment failures before breakdowns occur.</p>
+        
+        <h4 class="popup-section-title">BUSINESS IMPACT <i class="fa-solid fa-check" style="color: #00d2ff; margin-left: 5px;"></i></h4>
+        <ul class="popup-list">
+          <li>Reduced unexpected turbine downtime</li>
+          <li>Improved maintenance planning and operational efficiency</li>
+          <li>Enabled proactive failure detection</li>
+          <li>Helped lower maintenance and operational costs</li>
+          <li>Supported more reliable renewable energy production</li>
+        </ul>
+      </div>
+      <div class="popup-right">
+        <h4 class="popup-section-title">KEY ANALYTICAL APPROACHES</h4>
+        <ul class="popup-list popup-list--spaced">
+          <li>Predictive Modeling</li>
+          <li>Classification Algorithms</li>
+          <li>Exploratory Data Analysis (EDA)</li>
+          <li>Feature Engineering</li>
+          <li>Model Evaluation</li>
+        </ul>
+        
+        <h4 class="popup-section-title" style="margin-top: 30px;">SKILLS ACQUIRED</h4>
+        <ul class="popup-list popup-list--spaced">
+          <li>Machine Learning</li>
+          <li>Predictive Maintenance Analytics</li>
+          <li>Data Visualization</li>
+          <li>Operational Analytics</li>
+          <li>Model Optimization</li>
+        </ul>
+        
+        <h4 class="popup-section-title" style="margin-top: 30px;">TOOLS & TECHNOLOGIES</h4>
+        <ul class="popup-list">
+          <li>Python - Pandas - NumPy - Matplotlib - Seaborn - Scikit-learn - Jupyter Notebook</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="popup-content" id="popup-content-easyvisa" style="display: none;">
+      <div class="popup-left">
+        <h3 class="popup-title">EasyVisa – Visa Approval Prediction System</h3>
+        <p class="popup-subtitle">Project Name: EasyVisa – Visa Approval Prediction</p>
+        
+        <h4 class="popup-section-title">PROBLEM STATEMENT</h4>
+        <p class="popup-text">Develop a machine learning model to predict visa application outcomes based on applicant profiles and case-related factors.</p>
+        
+        <h4 class="popup-section-title">BUSINESS PROBLEM</h4>
+        <p class="popup-text">Visa processing involves large volumes of applications, making manual assessment time-consuming and resource intensive. The business needed a data-driven approach to help identify applications with higher approval probability and improve decision-making efficiency.</p>
+        
+        <h4 class="popup-section-title">RESOLUTION IMPLEMENTED <i class="fa-solid fa-check" style="color: #00d2ff; margin-left: 5px;"></i></h4>
+        <p class="popup-text">Built and evaluated machine learning classification models using applicant and visa case data to predict visa approval outcomes and uncover key influencing factors.</p>
+        
+        <h4 class="popup-section-title">BUSINESS IMPACT <i class="fa-solid fa-check" style="color: #00d2ff; margin-left: 5px;"></i></h4>
+        <ul class="popup-list">
+          <li>Improved efficiency in visa application assessment</li>
+          <li>Enabled data-driven decision making</li>
+          <li>Helped identify high-risk and high-potential applications</li>
+          <li>Reduced manual processing effort</li>
+          <li>Supported faster and more consistent evaluations</li>
+        </ul>
+      </div>
+      <div class="popup-right">
+        <h4 class="popup-section-title">KEY ANALYTICAL APPROACHES</h4>
+        <ul class="popup-list popup-list--spaced">
+          <li>Classification Modeling</li>
+          <li>Exploratory Data Analysis (EDA)</li>
+          <li>Feature Engineering</li>
+          <li>Data Preprocessing</li>
+          <li>Model Evaluation</li>
+        </ul>
+        
+        <h4 class="popup-section-title" style="margin-top: 30px;">SKILLS ACQUIRED</h4>
+        <ul class="popup-list popup-list--spaced">
+          <li>Machine Learning</li>
+          <li>Predictive Analytics</li>
+          <li>Data Visualization</li>
+          <li>Business Analytics</li>
+          <li>Statistical Analysis</li>
+        </ul>
+        
+        <h4 class="popup-section-title" style="margin-top: 30px;">TOOLS & TECHNOLOGIES</h4>
+        <ul class="popup-list">
+          <li>Python - Pandas - NumPy - Matplotlib - Seaborn - Scikit-learn - Jupyter Notebook</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="popup-content popup-content-custom" id="popup-content-knime" style="display: none;">
+      <div class="popup-custom-layout">
+        <!-- Left column -->
+        <div class="popup-custom-left stack-container">
+          
+          <div class="stack-items-wrapper">
+            <!-- Dynamic Text: RFM Overview -->
+            <div id="knime-text-rfm" class="knime-dynamic-text stack-item active-state">
+              <h3 class="popup-title" style="font-size: 1.4rem; margin-bottom: 30px;">Recency, Frequency, and Monetary<br>(RFM) Analysis</h3>
+              <h4 class="popup-section-title">What is RFM?</h4>
+              <p class="popup-text">RFM Analysis is a powerful marketing tool that segments customers based on their transaction history.</p>
+              <p class="popup-text">By understanding these segments, businesses can tailor their referral and loyalty programs effectively, ensuring they resonate with the right audience.</p>
+            </div>
+            
+            <!-- Dynamic Text: KNIME Workflow -->
+            <div id="knime-text-workflow" class="knime-dynamic-text stack-item">
+              <h3 class="popup-title" style="font-size: 1.4rem; margin-bottom: 30px;">Automation Workflow</h3>
+              <h4 class="popup-section-title">What is KNIME?</h4>
+              <p class="popup-text" style="font-size: 0.9rem; line-height: 1.6;">KNIME is a free, open-source data analytics platform that lets you build automation workflows visually (without heavy coding) to clean data, automate tasks, run machine learning models, and create end-to-end data solutions.</p>
+            </div>
+          </div>
+          
+          <div class="popup-buttons" style="margin-top: 40px;">
+            <a href="#" id="btn-hover-rfm" class="popup-btn popup-btn-active">RFM Overview</a>
+            <a href="https://public.tableau.com/app/profile/joseph.anthony.tan/viz/Automobile_17628711026780/Multivariate" target="_blank" class="popup-btn">Go to Tableau Public</a>
+            <a href="#" id="btn-hover-workflow" class="popup-btn">KNIME (RFM)</a>
+          </div>
+        </div>
+        
+        <!-- Right column -->
+        <div class="popup-custom-right stack-items-wrapper">
+          
+          <!-- Dynamic Visual: RFM Overview -->
+          <div id="knime-visual-rfm" class="knime-dynamic-visual stack-item active-state">
+            <div class="popup-image-container">
+              <img src="photos/knime-dashboard.png" alt="Tableau Dashboard" class="popup-dashboard-img">
+            </div>
+            <div class="popup-summary" style="margin-top: 25px;">
+              <h4 class="popup-section-title" style="color: #fff; font-size: 1rem;">Summary of the Business Insights:</h4>
+              <p class="popup-text" style="font-size: 0.9rem;">The analysis reveals clear opportunities to boost revenue by prioritizing high value customer segments, reactivating churned users, strengthening product and geographic strategies, and optimizing campaigns around peak sales periods.</p>
+            </div>
+          </div>
+          
+          <!-- Dynamic Visual: KNIME Workflow -->
+          <div id="knime-visual-workflow" class="knime-dynamic-visual stack-item">
+            <div class="popup-image-container">
+              <img src="photos/knime-workflow.png" alt="KNIME Workflow" class="popup-dashboard-img">
+            </div>
+            <div class="popup-summary" style="margin-top: 25px;">
+              <h4 class="popup-section-title" style="color: #fff; font-size: 1rem;">Processing Details:</h4>
+              <p class="popup-text" style="font-size: 0.9rem;"><strong>Monetary</strong> was calculated using Qty * price formula, <strong>Recency</strong> was processed using Date&Time Difference, <strong>Frequency</strong> was processed by GroupBy, and <strong>Binning</strong> was processed for assigning quantiles and labeling.</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+      <div class="popup-content popup-content-custom" id="popup-content-mba" style="display: none;">
+        <div class="popup-custom-layout">
+          <!-- Left column -->
+          <div class="popup-custom-left stack-container">
+            
+            <div class="stack-items-wrapper">
+              <!-- Dynamic Text: MBA Overview -->
+              <div id="mba-text-overview" class="knime-dynamic-text stack-item active-state">
+                <h3 class="popup-title" style="font-size: 1.4rem; margin-bottom: 30px;">Market Basket Analysis (MBA)</h3>
+                <h4 class="popup-section-title">What is MBA?</h4>
+                <p class="popup-text">Market Basket Analysis is a data mining technique used to identify products that customers frequently buy together, helping businesses discover buying patterns and create effective cross-sell, upsell, and product placement strategies.</p>
+              </div>
+              
+              <!-- Dynamic Text: KNIME Workflow -->
+              <div id="mba-text-workflow" class="knime-dynamic-text stack-item">
+                <h3 class="popup-title" style="font-size: 1.4rem; margin-bottom: 30px;">Market Basket Analysis (MBA)</h3>
+                <h4 class="popup-section-title">Uncover MBA using KNIME</h4>
+                <p class="popup-text" style="font-size: 0.9rem; line-height: 1.6;">Association Rule Mining is a data mining technique used to discover relationships, patterns, or co occurrences between items in large datasets, commonly used in market basket analysis. Identifies items that frequently occur together and quantifies the strength of their relationships using metrics like Support, Confidence, and Lift.</p>
+              </div>
+            </div>
+            
+            <div class="popup-buttons" style="margin-top: 40px;">
+              <a href="#" id="btn-hover-mba-overview" class="popup-btn popup-btn-active">MBA Overview</a>
+              <a href="https://public.tableau.com/app/profile/joseph.anthony.tan/viz/GroceryStoreMBAAnalysis/Exploratory" target="_blank" class="popup-btn">Go to Tableau Public</a>
+              <a href="#" id="btn-hover-mba-workflow" class="popup-btn">KNIME (MBA)</a>
+            </div>
+          </div>
+          
+          <!-- Right column -->
+          <div class="popup-custom-right stack-items-wrapper">
+            
+            <!-- Dynamic Visual: MBA Overview -->
+            <div id="mba-visual-overview" class="knime-dynamic-visual stack-item active-state">
+              <div class="popup-image-container">
+                <img src="photos/mba-overview.png?v=20260603" alt="MBA Overview Dashboard" class="popup-dashboard-img">
+              </div>
+              <div class="popup-summary" style="margin-top: 25px;">
+                <h4 class="popup-section-title" style="color: #fff; font-size: 1rem;">Summary of the Business Insights:</h4>
+                <p class="popup-text" style="font-size: 0.9rem;">Sales are driven by core categories like poultry, soda, and cereals, but overall revenue has declined since 2019 with clear mid year and weekday seasonal patterns leveraging strong cross sell behaviors and routine replenishment trends from Market Basket Analysis, the store should boost core-category promotions, introduce day specific offers, optimize product placement, and create bundled deals to increase basket size, stabilize dips, and improve inventory planning.</p>
+              </div>
+            </div>
+            
+            <!-- Dynamic Visual: KNIME Workflow -->
+            <div id="mba-visual-workflow" class="knime-dynamic-visual stack-item">
+              <div style="margin-bottom: 25px;">
+                <img src="photos/mba-knime-workflow.png?v=20260603" alt="KNIME Workflow" class="popup-dashboard-img" style="background: white; padding: 10px; border-radius: 8px;">
+              </div>
+              
+              <h4 class="popup-section-title" style="color: #fff; font-size: 1rem;">KNIME Results: Top 10 Association Products by Lift Metric</h4>
+              <div style="display: flex; gap: 20px; align-items: flex-start; margin-top: 15px;">
+                <img src="photos/mba-knime-results.png?v=20260603" alt="KNIME Results" style="width: 50%; height: auto; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+                <div style="width: 50%;">
+                  <p class="popup-text" style="font-size: 0.85rem; margin-bottom: 15px;">This means customers who buy <span style="color: #00d2ff;">eggs + Ice cream + pasta</span> are 79% more likely to also buy <span style="color: #ff3f3b;">paper towels</span> than average chance.</p>
+                  <p class="popup-text" style="font-size: 0.85rem; margin-bottom: 15px;"><strong>Lift is the strongest metric because:</strong><br>
+                  • Removes popularity bias<br>
+                  • Reveals true relationships, not just frequently bought items<br>
+                  • Best indicator for cross sell, store layout, and recommendations</p>
+                  <p class="popup-text" style="font-size: 0.85rem;"><strong>Top 10 Lift rules show:</strong><br>
+                  • Very strong associations<br>
+                  • High value bundles for promotions<br>
+                  • Good logic for "Recommended Products" engine</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <!-- GAMERS ARENA POPUP -->
+      <div class="popup-content popup-content-custom" id="popup-content-gamers" style="display: none; padding: 10px; background: transparent; box-shadow: none;">
+        <img src="photos/gamers-arena-dashboard.png?v=20260603" alt="Gamers Arena Dashboard" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+      </div>
+
+      <!-- LOOKER STUDIO POPUP -->
+      <div class="popup-content popup-content-custom" id="popup-content-looker" style="display: none; padding: 10px; background: transparent; box-shadow: none; text-align: center;">
+        <img src="photos/looker-studio-dashboard.png?v=20260603" alt="Looker Studio Dashboard" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+        
+        <div style="margin-top: 20px;">
+          <a href="https://datastudio.google.com/reporting/e8cacc8d-08ef-4a0c-b09e-a491429372f1/page/qgR" target="_blank" class="popup-btn" style="display: inline-block; padding: 12px 30px; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">View Live Dashboard</a>
+        </div>
+      </div>
+
+    </div>
+  
+    <script src="script.js?v=20260603-looker-popup"></script>
+  </body>
+</html>
