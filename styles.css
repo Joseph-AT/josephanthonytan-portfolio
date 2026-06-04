@@ -808,6 +808,10 @@ a {
     0 0 1px rgba(255, 255, 255, 0.4);
 }
 
+.projects-tag-mobile {
+  display: none;
+}
+
 /* Base Title */
 .section-title {
   position: absolute;
@@ -995,10 +999,21 @@ a {
 .is-visible .project-card:nth-child(4), .is-visible .about-card:nth-child(4) { transition-delay: 0.6s; }
 
 @media (max-width: 768px) {
+  html,
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
   :root {
     --center-copy-size: 22px;
-    --subject-scale: 0.85;
-    --subject-y: 15vh;
+    --subject-scale: 0.78;
+    --subject-y: calc(16vh - 40px);
   }
 
   .hero {
@@ -1043,7 +1058,7 @@ a {
   }
 
   .pill-nav::after {
-    content: "SWIPE \2192"; /* Text with right arrow */
+    content: "SWIPE MENU \2192"; /* Text with right arrow */
     position: absolute;
     bottom: 0;
     right: 20px;
@@ -1082,6 +1097,16 @@ a {
     z-index: 10;
   }
 
+  .hero__subject {
+    inset: 0 auto auto 50% !important;
+    width: 136vw !important;
+    height: 100dvh !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    object-position: center bottom !important;
+    transform: translateX(-50%) translateY(var(--subject-y)) scale(var(--subject-scale)) !important;
+  }
+
   .hero__intro, .hero__statement, .button--work, .button--builds, .hero-metrics {
     position: absolute !important;
     transform: none !important;
@@ -1091,7 +1116,7 @@ a {
 
   .hero__intro {
     font-size: 2.2rem !important;
-    top: 16vh !important;
+    top: calc(16vh + 20px) !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     width: 100% !important;
@@ -1100,7 +1125,7 @@ a {
 
   .hero__intro--right {
     font-size: 1.8rem !important;
-    top: 21vh !important;
+    top: calc(21vh + 20px) !important;
   }
 
   .hero__statement {
@@ -1121,9 +1146,10 @@ a {
   .button--work, .button--builds {
     bottom: 10vh !important;
     top: auto !important;
-    width: 43vw !important;
+    width: 44vw !important;
     max-width: none !important;
-    font-size: 0.55rem !important;
+    font-size: 0.48rem !important;
+    letter-spacing: 0.055em !important;
     padding: 10px 5px !important;
     text-align: center;
     display: flex !important;
@@ -1134,18 +1160,18 @@ a {
   }
 
   .button--work {
-    left: 5vw !important;
+    left: 4vw !important;
   }
 
   .button--builds {
-    right: 5vw !important;
+    right: 4vw !important;
   }
   
   .hero-metrics {
     display: flex !important;
     flex-direction: column !important;
-    gap: 20px !important;
-    top: 40vh !important;
+    gap: 17px !important;
+    top: 34vh !important;
   }
 
   .hero-metrics--left {
@@ -1179,14 +1205,52 @@ a {
   
   .hero-metric-label {
     font-size: 0.5rem !important;
+    max-width: 115px !important;
+    line-height: 1.25 !important;
   }
 
   .section-title {
     top: 140px; /* Clears the taller stacked mobile header */
-    left: 0;
-    font-size: 34px; /* Scales the text beautifully for narrow screens */
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    font-size: 28px; /* Keeps long titles inside narrow mobile viewports */
     width: 100%;
-    text-align: center;
+    padding: 0 14px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.26em;
+    text-align: center !important;
+    white-space: nowrap;
+  }
+
+  .layout-left .section-title,
+  .layout-right .section-title {
+    left: 50% !important;
+    right: auto !important;
+    text-align: center !important;
+    transform: translateX(-50%) !important;
+  }
+
+  #projects .section-title {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.28em;
+    white-space: nowrap;
+  }
+
+  .projects-tag-desktop {
+    display: none;
+  }
+
+  .projects-tag-mobile {
+    display: inline;
   }
 
   .section {
@@ -1326,11 +1390,13 @@ a {
 }
 
 @media (max-width: 768px) {
-  .tools-3d-scene { height: 350px; perspective: 1200px; }
-  .tools-3d-track { width: 160px; height: 240px; }
-  .tools-3d-panel { transform: rotateY(calc(var(--i) * 45deg)) translateZ(260px); padding: 15px 10px;}
-  .tools-3d-panel:hover { transform: rotateY(calc(var(--i) * 45deg)) translateZ(280px) scale(1.05); }
-  .tech-chip { font-size: 0.7rem; padding: 6px 8px; }
+  .tools-3d-scene { height: 300px; perspective: 900px; overflow: hidden; }
+  .tools-3d-track { width: 118px; height: 180px; }
+  .tools-3d-panel { transform: rotateY(calc(var(--i) * 45deg)) translateZ(165px); padding: 12px 8px;}
+  .tools-3d-panel:hover { transform: rotateY(calc(var(--i) * 45deg)) translateZ(180px) scale(1.04); }
+  .panel-label { font-size: 0.48rem; margin-bottom: 12px; padding-bottom: 7px; }
+  .panel-chips { gap: 7px; }
+  .tech-chip { font-size: 0.58rem; padding: 5px 6px; border-radius: 6px; }
 }
 
 /* ==========================================================================
@@ -2054,10 +2120,58 @@ a {
 }
 
 @media (max-width: 768px) {
-  .reach-out-grid { grid-template-columns: 1fr; gap: 60px; text-align: center; }
-  .reach-social-deck { justify-content: center; }
+  #contact .section-content {
+    margin-left: 7vw;
+    margin-right: 7vw;
+  }
+
+  .reach-out-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    margin-top: 34px;
+    padding: 24px 0;
+    text-align: center;
+  }
+
+  .reach-headline-gradient {
+    font-size: 2rem;
+    margin-bottom: 28px;
+    line-height: 1.08;
+  }
+
+  .reach-meta-block {
+    margin-bottom: 16px;
+  }
+
+  .reach-label {
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+  }
+
+  .reach-link {
+    max-width: 100%;
+    font-size: 1.08rem;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+
+  .email-link {
+    padding-bottom: 3px;
+  }
+
+  .reach-social-deck {
+    justify-content: center;
+    gap: 16px;
+    margin-top: 34px;
+  }
+
+  .social-vessel {
+    width: 48px;
+    height: 48px;
+    font-size: 1.35rem;
+  }
+
   .reach-link:hover { transform: translateY(-3px); }
-  .reach-headline-gradient { font-size: 2.5rem; }
   .reach-out-avatar-system { order: -1; } /* Push photo to top on mobile */
 }
 
