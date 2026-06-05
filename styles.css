@@ -1141,7 +1141,7 @@ a {
 
   .hero__statement {
     top: auto !important;
-    bottom: clamp(185px, 25vh, 215px) !important;
+    bottom: clamp(120px, 17vh, 155px) !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     width: 100% !important;
