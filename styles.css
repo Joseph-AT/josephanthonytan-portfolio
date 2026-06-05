@@ -1003,11 +1003,16 @@ a {
   body {
     -ms-overflow-style: none;
     scrollbar-width: none;
+    cursor: auto;
   }
 
   html::-webkit-scrollbar,
   body::-webkit-scrollbar {
     display: none;
+  }
+
+  #custom-cursor-container {
+    display: none !important;
   }
 
   :root {
@@ -1119,18 +1124,24 @@ a {
     top: calc(16vh + 20px) !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
-    width: 100% !important;
+    width: calc(100vw - 28px) !important;
     text-align: center !important;
   }
 
   .hero__intro--right {
-    font-size: 1.8rem !important;
+    font-size: clamp(1.35rem, 7vw, 1.8rem) !important;
     top: calc(21vh + 20px) !important;
+    line-height: 1.12 !important;
+    white-space: normal !important;
+  }
+
+  .hero__intro--right span#hero-role {
+    display: inline !important;
   }
 
   .hero__statement {
     top: auto !important;
-    bottom: 25vh !important;
+    bottom: clamp(185px, 25vh, 215px) !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     width: 100% !important;
