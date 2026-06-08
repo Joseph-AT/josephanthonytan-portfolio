@@ -1269,6 +1269,215 @@ a {
   }
 }
 
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait),
+       (pointer: coarse) and (orientation: portrait) {
+  :root {
+    --center-copy-size: 22px;
+    --subject-scale: 0.78;
+    --subject-y: calc(16vh - 40px);
+  }
+
+  .hero {
+    min-height: 100dvh;
+  }
+
+  .hero-artboard {
+    width: 100vw;
+    height: 100dvh;
+    left: 0;
+    top: 0;
+    transform: none;
+  }
+
+  .site-header {
+    top: 20px;
+    left: 0;
+    width: 100%;
+    transform: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .site-header__inner {
+    position: relative;
+    top: 0;
+    padding: 0 24px;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    transform: none;
+    left: 0;
+  }
+
+  .pill-nav {
+    width: 100%;
+    max-width: 100vw;
+    justify-content: flex-start;
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  .pill-nav::after {
+    content: "SWIPE MENU \2192";
+    position: absolute;
+    bottom: 0;
+    right: 24px;
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.2em;
+    font-weight: 500;
+    pointer-events: none;
+    animation: swipeHintPulse 2s infinite ease-in-out;
+  }
+
+  .pill-nav-items {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    justify-content: flex-start;
+  }
+
+  .pill-nav-items::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hero__copy {
+    display: block;
+    width: 100vw;
+    height: 100dvh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  .hero__subject {
+    inset: 0 auto auto 50% !important;
+    width: 136vw !important;
+    height: 100dvh !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    object-position: center bottom !important;
+    transform: translateX(-50%) translateY(var(--subject-y)) scale(var(--subject-scale)) !important;
+  }
+
+  .hero__intro,
+  .hero__statement,
+  .button--work,
+  .button--builds,
+  .hero-metrics {
+    position: absolute !important;
+    transform: none !important;
+    margin: 0 !important;
+    pointer-events: auto !important;
+  }
+
+  .hero__intro {
+    font-size: 2.2rem !important;
+    top: calc(16vh + 20px) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: calc(100vw - 28px) !important;
+    text-align: center !important;
+  }
+
+  .hero__intro--right {
+    font-size: clamp(1.35rem, 7vw, 1.8rem) !important;
+    top: calc(21vh + 20px) !important;
+    line-height: 1.12 !important;
+    white-space: normal !important;
+  }
+
+  .hero__intro--right span#hero-role {
+    display: inline !important;
+  }
+
+  .hero__statement {
+    top: auto !important;
+    bottom: clamp(120px, 17vh, 155px) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    text-align: center !important;
+    z-index: 20 !important;
+  }
+
+  .hero__statement p {
+    font-size: 1.3rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .button--work,
+  .button--builds {
+    bottom: 10vh !important;
+    top: auto !important;
+    width: 44vw !important;
+    max-width: none !important;
+    font-size: 0.48rem !important;
+    letter-spacing: 0.055em !important;
+    padding: 10px 5px !important;
+    text-align: center;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 40px !important;
+    background: #191a2d !important;
+  }
+
+  .button--work {
+    left: 4vw !important;
+  }
+
+  .button--builds {
+    right: 4vw !important;
+  }
+
+  .hero-metrics {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 17px !important;
+    top: 34vh !important;
+  }
+
+  .hero-metrics--left {
+    left: 5vw !important;
+    align-items: flex-start !important;
+  }
+
+  .hero-metrics--left .hero-metric {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .hero-metrics--right {
+    right: 5vw !important;
+    align-items: flex-end !important;
+  }
+
+  .hero-metrics--right .hero-metric {
+    align-items: flex-end !important;
+    text-align: right !important;
+  }
+
+  .hero-metric {
+    margin: 0 !important;
+    flex: none !important;
+  }
+
+  .hero-metric-num {
+    font-size: 1.4rem !important;
+  }
+
+  .hero-metric-label {
+    font-size: 0.5rem !important;
+    max-width: 115px !important;
+    line-height: 1.25 !important;
+  }
+}
+
 /* ==========================================================================
    3D CAROUSEL ENGINE - TOOLS & TECH
    ========================================================================== */
