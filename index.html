@@ -3,13 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function() {
+      var ua = navigator.userAgent || "";
+      var isMobileUA = /Android|iPhone|iPod|Mobile|LinkedInApp/i.test(ua);
+      var hasTouch = navigator.maxTouchPoints > 0;
+      var narrowScreen = Math.min(screen.width || 0, screen.height || 0) <= 600;
+      if (isMobileUA || (hasTouch && narrowScreen)) {
+        document.documentElement.classList.add("is-mobile-webview");
+      }
+    })();
+  </script>
   <title>Joseph | Data Analyst</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <link rel="stylesheet" href="styles.css?v=20260608-touch-portrait-hero">
+  <link rel="stylesheet" href="styles.css?v=20260608-mobile-webview-hero">
 </head>
 <body>
   <canvas id="dot-field-canvas"></canvas>
